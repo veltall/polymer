@@ -1,0 +1,105 @@
+<!doctype html>
+<html>
+
+<head>
+
+    <title>Study Network</title>
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+
+    <script src="../components/webcomponentsjs/webcomponents.js">
+    </script>
+
+    <link rel="import" href="../components/paper-input/paper-input.html" />
+    <link rel="import" href="../components/paper-button/paper-button.html" />
+    <link rel="import" href="../components/paper-checkbox/paper-checkbox.html" />
+
+    <style>
+
+    #container {
+        margin-top: 200px;
+    }
+
+    #container #hidden {
+        visibility: hidden;
+    }
+
+    .custom /deep/ ::-webkit-input-placeholder {
+      color: #74b4c4;
+    }
+
+    .custom /deep/ ::-moz-placeholder {
+      color: #74b4c4;
+    }
+
+    .custom /deep/ :-ms-input-placeholder {
+      color: #74b4c4;
+    }
+
+    .custom /deep/ .label-text,
+    .custom /deep/ .error {
+      color: #74b4c4;
+    }
+
+    .custom /deep/ .unfocused-underline {
+      background-color: #74b4c4;
+    }
+
+    .custom[focused] /deep/ .floated-label .label-text {
+      color: #0f9d58;
+    }
+
+    .custom /deep/ .focused-underline {
+      background-color: #0f9d58;
+    }
+
+    .custom /deep/ .cursor {
+      background-color: #1a237e;
+    }
+
+    .custom.invalid /deep/ .floated-label .label-text,
+    .custom /deep/ .error {
+      color: #f06292;
+    }
+
+    .custom.invalid /deep/ .focused-underline,
+    .custom.invalid /deep/ .cursor {
+      background-color: #f06292;
+    }
+
+    .custom {
+      color: #1a237e;
+    }
+
+
+    </style>
+
+
+</head>
+
+
+<body>
+
+    <section id="container" layout vertical center>
+        <paper-input id = "hidden" label="Email" class="custom"></paper-input>
+        <paper-input class="custom" label="Username"></paper-input>
+        
+        <paper-input-decorator class="custom" label="Password">
+          <input type="password" is="core-input">
+        </paper-input-decorator>
+
+        <section layout horizontal center>
+            <paper-button raised>Sign in!</paper-button>
+            <paper-button raised onclick="showEmail()">Register</paper-button>
+        </section>
+    </section>
+
+    <script>
+    function showEmail() {
+        console.log("showEmail() fired");
+        document.getElementById("hidden").style.visibility = "visible";
+    }
+    </script>
+
+</body>
+
+</html>

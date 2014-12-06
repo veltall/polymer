@@ -1,0 +1,22 @@
+{
+  "name": "Study Network",
+  "version": "0.1",
+  "description": "Experimentation with various Polymer components to build a test project",
+  "main": "src/index.html",
+  "authors": [
+    "Vu Dinh"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "core-elements": "Polymer/core-elements#~0.5.1",
+    "paper-elements": "Polymer/paper-elements#~0.5.1"
+  }
+}

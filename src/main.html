@@ -1,0 +1,134 @@
+<!doctype html>
+<html>
+
+<head>
+
+    <title>Study Network</title>
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+
+    <script src="../components/webcomponentsjs/webcomponents.js">
+    </script>
+
+    <link rel="import" href="../components/paper-input/paper-input.html" />
+    <link rel="import" href="../components/paper-button/paper-button.html" />
+    <link rel="import" href="../components/paper-checkbox/paper-checkbox.html" />
+    <link rel="import" href="../components/core-scaffold/core-scaffold.html">
+
+    <link rel="import" href="../components/core-scroll-header-panel/core-scroll-header-panel.html">
+    <link rel="import" href="../components/core-header-panel/core-header-panel.html">
+    <link rel="import" href="../components/core-menu/core-menu.html">
+    <link rel="import" href="../components/core-menu/core-submenu.html">
+    <link rel="import" href="../components/core-item/core-item.html">
+    <link rel="import" href="../components/core-toolbar/core-toolbar.html">
+
+    <link rel="import" href="post-list.html">
+
+    <style>
+
+    #container {
+        margin-top: 200px;
+    }
+
+    .content-container {
+        width: 80%;
+        margin: 50px auto;
+      }
+
+    #container #hidden {
+        visibility: hidden;
+    }
+
+    .custom /deep/ ::-webkit-input-placeholder {
+      color: #74b4c4;
+    }
+
+    .custom /deep/ ::-moz-placeholder {
+      color: #74b4c4;
+    }
+
+    .custom /deep/ :-ms-input-placeholder {
+      color: #74b4c4;
+    }
+
+    .custom /deep/ .label-text,
+    .custom /deep/ .error {
+      color: #74b4c4;
+    }
+
+    .custom /deep/ .unfocused-underline {
+      background-color: #74b4c4;
+    }
+
+    .custom[focused] /deep/ .floated-label .label-text {
+      color: #0f9d58;
+    }
+
+    .custom /deep/ .focused-underline {
+      background-color: #0f9d58;
+    }
+
+    .custom /deep/ .cursor {
+      background-color: #1a237e;
+    }
+
+    .custom.invalid /deep/ .floated-label .label-text,
+    .custom /deep/ .error {
+      color: #f06292;
+    }
+
+    .custom.invalid /deep/ .focused-underline,
+    .custom.invalid /deep/ .cursor {
+      background-color: #f06292;
+    }
+
+    .custom {
+      color: #1a237e;
+    }
+
+
+    </style>
+
+
+</head>
+
+
+<body>
+
+    <core-scaffold>
+      <core-header-panel navigation flex mode="seamed">
+        <core-toolbar>Navigation</core-toolbar>
+        
+        <core-menu selected="0">
+
+          <core-submenu icon="settings" label="Topics">
+            <core-item label="Topic 1"></core-item>
+            <core-item label="Topic 2"></core-item>
+          </core-submenu>
+
+          <core-submenu icon="settings" label="Favorites">
+            <core-item label="Favorite 1"></core-item>
+            <core-item label="Favorite 2"></core-item>
+            <core-item label="Favorite 3"></core-item>
+          </core-submenu>
+
+        </core-menu>
+      
+      </core-header-panel>
+      <div tool>Title</div>
+
+      <div class="content-container" layout vertical center>
+          <post-list show="all"></post-list>
+      </div>
+
+    </core-scaffold>
+
+    <script>
+    function showEmail() {
+        console.log("showEmail() fired");
+        document.getElementById("hidden").style.visibility = "visible";
+    }
+    </script>
+
+</body>
+
+</html>
